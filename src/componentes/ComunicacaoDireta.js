@@ -3,32 +3,38 @@ import { View, Text } from 'react-native'
 
 const fonte = { style: { fontSize: 30 } }
 
+function filhoComProps(props) {
+   React.Children.map(props.children,
+      c => React.cloneElement(c, ...props, ...c.props))
+
+}
+
 export const Filho = props => {
-    <View>
-        <Text {...fonte}>Filho: {props.nome} {props.sobrenome}</Text>
-    </View>
+   <View>
+      <Text {...fonte}>Filho: {props.nome} {props.sobrenome}</Text>
+   </View>
 }
 
 export const Pai = props => {
-    //utilizando o operador spread para passar as propriedades do objeto fonte para o Componente View
-    <View>
-        <Text {...fonte}>Pai: {props.nome} {props.sobrenome}</Text>
-        {props.children}
-    </View>
+   //utilizando o operador spread para passar as propriedades do objeto fonte para o Componente View
+   <View>
+      <Text {...fonte}>Pai: {props.nome} {props.sobrenome}</Text>
+      {/*props.children*/}
+      {filhoComProps(props)}
+   </View>
 }
 
 export const Avo = props => {
-    <View>
-        <Text {...fonte}>Avô: {props.nome}  {props.sobrenome}</Text>
-        <Pai nome='André' sobrenome={props.sobrenome}>
-            <Filho nome='Ana'/>
-            <Filho nome='Gui'/>
-            <Filho nome='Davi'/>
-        </Pai>
-        <Pai {...props} nome='Pedro'>
-            <Filho nome='José'/>
-            <Filho nome='Joana'/>
-
-        </Pai>
-    </View>
+   <View>
+      <Text {...fonte}>Avô: {props.nome}  {props.sobrenome}</Text>
+      <Pai nome='André' sobrenome={props.sobrenome}>
+         <Filho nome='Ana' />
+         <Filho nome='Gui' />
+         <Filho nome='Davi' />
+      </Pai>
+      <Pai {...props} nome='Pedro'>
+         <Filho nome='José' />
+         <Filho nome='Joana' />
+      </Pai>
+   </View>
 }
