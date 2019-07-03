@@ -7,38 +7,38 @@ import Contador from './componentes/Contador'
 import Plataformas from './componentes/Plataformas'
 import ValidarProps from './componentes/ValidarProps'
 import Evento from './componentes/Evento'
-import {Avo} from './componentes/ComunicacaoDireta'
+import { Avo } from './componentes/ComunicacaoDireta'
 
 export default createDrawerNavigator({
-    Avo: {
-        screen: () => <Avo nome='João' sobrenome='da Silva'/>
-    },
-    Evento: {
-        screen: () => <Evento />
-    },
-    ValidarProps: {
-        screen: () => <ValidarProps label='Ano: ' ano={19} />
-    },
-    Plataformas: {
-        screen: () => <Plataformas />
+   Avo: {
+      screen: () => <Avo nome='João' sobrenome='da Silva' />
+   },
+   Evento: {
+      screen: () => <Evento />
+   },
+   ValidarProps: {
+      screen: () => <ValidarProps label='Ano: ' ano={19} />
+   },
+   Plataformas: {
+      screen: () => <Plataformas />
 
-    },
-    Contador: {
-        screen: () => <Contador />
-    },
-    MegaSena: {
-        screen: () => <MegaSena numeros={6} />,
-        navigatinOptions: { title: 'Mega Sena' }
-    },
-    Inverter: {
-        screen: () => <Inverter texto='Testando menu' />
-    },
-    ParImpar: {
-        screen: () => <ParImpar numero={23} />,
-        navigatinOptions: { title: 'Par ou Impar' }
-    },
-    Simples: {
-        screen: () => <Simples texto='Flexível' />
-    }
+   },
+   Contador: {
+      screen: () => <Contador />
+   },
+   MegaSena: {
+      screen: () => <MegaSena numeros={6} />,
+      navigatinOptions: { title: 'Mega Sena' }
+   },
+   Inverter: {
+      screen: () => <Inverter texto='Testando menu' />
+   },
+   ParImpar: {
+      screen: () => <ParImpar numero={23} />,
+      navigatinOptions: { title: 'Par ou Impar' }
+   },
+   Simples: {
+      screen: () => <Simples texto='Flexível' />
+   }
 
 }, { drawerWidth: 220 })
