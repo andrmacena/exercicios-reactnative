@@ -13,7 +13,7 @@ import TextoSincronizado from './componentes/ComunicacaoIndireta'
 export default createDrawerNavigator({
    TextoSincronizado: {
       screen: () => <TextoSincronizado />,
-      navigatinOptions: {title: 'Texto Sincronizado' }
+      navigatinOptions: { title: 'Texto Sincronizado' }
    },
    Avo: {
       screen: () => <Avo nome='João' sobrenome='da Silva' />
