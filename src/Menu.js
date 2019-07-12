@@ -21,7 +21,7 @@ export default createDrawerNavigator({
    },
    TextoSincronizado: {
       screen: () => <TextoSincronizado />,
-      navigatinOptions: { title: 'Texto Sincronizado' }
+      navigationOptions: { title: 'Texto Sincronizado' }
    },
    Avo: {
       screen: () => <Avo nome='João' sobrenome='da Silva' />
@@ -41,14 +41,14 @@ export default createDrawerNavigator({
    },
    MegaSena: {
       screen: () => <MegaSena numeros={6} />,
-      navigatinOptions: { title: 'Mega Sena' }
+      navigationOptions: { title: 'Mega Sena' }
    },
    Inverter: {
       screen: () => <Inverter texto='Testando menu' />
    },
    ParImpar: {
       screen: () => <ParImpar numero={23} />,
-      navigatinOptions: { title: 'Par ou Impar' }
+      navigationOptions: { title: 'Par ou Impar' }
    },
    Simples: {
       screen: () => <Simples texto='Flexível' />
