@@ -18,8 +18,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingHorizontal: 15
-
-
     },
     sul: {
         flex: 1,
